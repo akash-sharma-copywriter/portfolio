@@ -1,0 +1,1184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akash Sharma | Director of Copywriting</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #111010;
+    --bg2: #171615;
+    --bg3: #1e1c1b;
+    --gold: #C8A96E;
+    --gold-light: #e0c896;
+    --white: #F2EDE6;
+    --muted: #8a8278;
+    --border: rgba(200,169,110,0.15);
+    --border-light: rgba(242,237,230,0.08);
+    --radius: 4px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(17,16,16,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 100px 60px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(200,169,110,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-left h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(52px, 7vw, 88px);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .hero-left h1 span {
+    color: var(--gold);
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+
+  .hero-bio {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(242,237,230,0.65);
+    max-width: 420px;
+    line-height: 1.75;
+    margin-bottom: 36px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold);
+    color: #111010;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 13px 28px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 12px 28px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* Stats grid */
+  .hero-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .stat-box {
+    background: var(--bg2);
+    padding: 32px 28px;
+    transition: background 0.2s;
+  }
+
+  .stat-box:hover { background: var(--bg3); }
+
+  .stat-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .hero-quote {
+    grid-column: 1 / -1;
+    background: var(--bg2);
+    padding: 24px 28px;
+    border-top: 1px solid var(--border-light);
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(242,237,230,0.55);
+    font-weight: 300;
+  }
+
+  /* ── SECTION WRAPPER ── */
+  section {
+    padding: 80px 60px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .section-num {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+
+  /* ── WORK ── */
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .work-card {
+    background: var(--bg2);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-decoration: none;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+
+  .work-card:hover { background: var(--bg3); }
+
+  .work-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: rgba(200,169,110,0.1);
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  .work-company {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .work-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+  }
+
+  .work-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(242,237,230,0.55);
+    line-height: 1.65;
+    flex: 1;
+  }
+
+  .work-link {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--gold);
+    margin-top: 8px;
+  }
+
+  /* ── IMPACT ── */
+  .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .impact-card {
+    background: var(--bg2);
+    padding: 40px 32px;
+  }
+
+  .impact-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .impact-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .impact-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(242,237,230,0.55);
+    line-height: 1.65;
+  }
+
+  .impact-cases {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .case-card {
+    background: var(--bg2);
+    padding: 28px 32px;
+  }
+
+  .case-tag {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .case-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .case-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(242,237,230,0.5);
+    line-height: 1.65;
+  }
+
+  .case-pills {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+
+  .pill {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: rgba(255,255,255,0.05);
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+
+  /* ── EXPERTISE ── */
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .expertise-card {
+    background: var(--bg2);
+    padding: 36px 28px;
+    transition: background 0.2s;
+  }
+
+  .expertise-card:hover { background: var(--bg3); }
+
+  .expertise-icon {
+    font-size: 22px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .expertise-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .expertise-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(242,237,230,0.5);
+    line-height: 1.65;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 160px 20px 1fr;
+    gap: 0 24px;
+    padding: 36px 0;
+    border-bottom: 1px solid var(--border-light);
+    position: relative;
+  }
+
+  .timeline-item:last-child { border-bottom: none; }
+
+  .tl-dates {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    padding-top: 3px;
+    text-align: right;
+  }
+
+  .tl-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .tl-dot::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  .tl-dot::after {
+    content: '';
+    width: 1px;
+    flex: 1;
+    background: var(--border-light);
+    margin-top: 8px;
+  }
+
+  .timeline-item:last-child .tl-dot::after { display: none; }
+
+  .tl-content {}
+
+  .tl-role {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .tl-company {
+    font-size: 13px;
+    color: var(--gold);
+    margin-bottom: 16px;
+    letter-spacing: 0.03em;
+  }
+
+  .tl-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .tl-bullets li {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(242,237,230,0.55);
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .tl-bullets li::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 12px;
+  }
+
+  /* ── SKILLS ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .skills-col {
+    background: var(--bg2);
+    padding: 40px 36px;
+  }
+
+  .skills-col-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.06em;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .skills-col-title span { color: var(--gold); }
+
+  .skills-group { margin-bottom: 24px; }
+
+  .skills-group-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .chip {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(242,237,230,0.7);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-light);
+    padding: 5px 12px;
+    border-radius: 2px;
+  }
+
+  /* ── REVIEWS ── */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .review-card {
+    background: var(--bg2);
+    padding: 36px 32px;
+  }
+
+  .reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .reviewer-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #111010;
+    flex-shrink: 0;
+  }
+
+  .reviewer-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .reviewer-title {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .review-stars {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .review-quote {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(242,237,230,0.75);
+    line-height: 1.75;
+    border-left: 2px solid var(--gold);
+    padding-left: 18px;
+    margin-bottom: 16px;
+  }
+
+  .review-body {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgba(242,237,230,0.45);
+    line-height: 1.7;
+  }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: var(--bg2);
+    text-align: center;
+    padding: 100px 60px;
+    border-bottom: none;
+  }
+
+  .contact-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .contact-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.05;
+  }
+
+  .contact-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(242,237,230,0.5);
+    max-width: 480px;
+    margin: 0 auto 48px;
+    line-height: 1.7;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg3);
+    border: 1px solid var(--border-light);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .contact-link:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 24px 60px;
+    border-top: 1px solid var(--border-light);
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-left > * {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero-left .hero-tag { animation-delay: 0.05s; }
+  .hero-left h1 { animation-delay: 0.12s; }
+  .hero-left .hero-bio { animation-delay: 0.22s; }
+  .hero-left .hero-ctas { animation-delay: 0.32s; }
+
+  .hero-right {
+    animation: fadeUp 0.7s 0.2s ease both;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { gap: 20px; }
+    .hero { grid-template-columns: 1fr; padding: 60px 24px; }
+    section { padding: 60px 24px; }
+    .work-grid { grid-template-columns: 1fr; }
+    .impact-grid { grid-template-columns: 1fr; }
+    .expertise-grid { grid-template-columns: 1fr 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .impact-cases { grid-template-columns: 1fr; }
+    .timeline-item { grid-template-columns: 100px 16px 1fr; }
+    .contact-section { padding: 80px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">AKASH SHARMA</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <span class="hero-tag">Director of Copywriting</span>
+    <h1>Akash<br /><span>Sharma</span></h1>
+    <p class="hero-bio">
+      7+ years building copy that moves people through funnels across SaaS, B2B, podcasting, and cybersecurity. I lead teams, write the hard stuff, and make sure nothing ships unless it's built to convert.
+    </p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">→ Work With Me</a>
+      <a href="#work" class="btn-secondary">↓ View Work</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-box">
+      <div class="stat-number">7+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">60</div>
+      <div class="stat-label">Niches Built (PodAllies + PodUp)</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">4</div>
+      <div class="stat-label">Industries Covered</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">US</div>
+      <div class="stat-label">U.S. Clients Served</div>
+    </div>
+    <div class="hero-quote">
+      "Copy that earns attention and closes the gap between interest and action."
+    </div>
+  </div>
+</div>
+
+<!-- WORK -->
+<section id="work">
+  <div class="section-label">
+    <span class="section-num">01 / WORK SAMPLES</span>
+    <h2 class="section-title">Selected Writing</h2>
+  </div>
+  <div class="work-grid">
+
+    <a href="https://podallies.com" class="work-card" target="_blank">
+      <div class="work-tags">
+        <span class="tag">Sales Funnel</span>
+        <span class="tag">Long-Form</span>
+      </div>
+      <div class="work-company">PODUP · PODALLIES</div>
+      <div class="work-title">37-Niche Funnel Copy System</div>
+      <div class="work-desc">Full-funnel copy spanning landing pages, email sequences, and VSL scripts built across 30 PodAllies niches and 30 PodUp niches' done-for-you podcast production service targeting busy executives.</div>
+      <div class="work-link">VIEW LIVE SITE →</div>
+    </a>
+
+    <a href="https://podup.com/copy-of-blackfriday" class="work-card" target="_blank">
+      <div class="work-tags">
+        <span class="tag">VSL Script</span>
+        <span class="tag">Landing Page</span>
+      </div>
+      <div class="work-company">PODUP · BLACK FRIDAY</div>
+      <div class="work-title">Black Friday Founding Creator Launch</div>
+      <div class="work-desc">Wrote the VSL script and landing page copy for PodUp's Black Friday campaign. The video script drives urgency around a 50% lifetime discount using a three-problem, one-solution narrative structure.</div>
+      <div class="work-link">VIEW LIVE PAGE →</div>
+    </a>
+
+    <a href="https://www.cloudradius.com/wireless-enterprise-authentication-802-1x/" class="work-card" target="_blank">
+      <div class="work-tags">
+        <span class="tag">Technical Blog</span>
+        <span class="tag">SEO</span>
+      </div>
+      <div class="work-company">SECUREW2 · CLOUDRADIUS</div>
+      <div class="work-title">Enterprise Wi-Fi Authentication Guide</div>
+      <div class="work-desc">Long-form technical guide on 802.1X wireless enterprise authentication, written for IT administrators and network security buyers. Clear, structured, and built to rank for high-intent search terms.</div>
+      <div class="work-link">READ ARTICLE →</div>
+    </a>
+
+    <a href="https://podup.com" class="work-card" target="_blank">
+      <div class="work-tags">
+        <span class="tag">Website Copy</span>
+        <span class="tag">SaaS</span>
+      </div>
+      <div class="work-company">PODUP · WEB</div>
+      <div class="work-title">SaaS Platform Website Copy</div>
+      <div class="work-desc">Website copy for an AI-powered podcasting platform with 60+ tools and 17 AI features. Positioning, feature hierarchy, and CTAs all written to move creators from curious to converted.</div>
+      <div class="work-link">VIEW LIVE SITE →</div>
+    </a>
+
+    <a href="https://www.cloudradius.com/5-cyberattacks-mitigated-by-802-1x-wi-fi/" class="work-card" target="_blank">
+      <div class="work-tags">
+        <span class="tag">Technical Blog</span>
+        <span class="tag">Demand Gen</span>
+      </div>
+      <div class="work-company">SECUREW2 · CLOUDRADIUS</div>
+      <div class="work-title">5 Cyberattacks Stopped by 802.1X Wi-Fi</div>
+      <div class="work-desc">Awareness-stage blog mapping real-world attack scenarios to a single authentication solution. Written to generate inbound leads by making the business risk concrete before pitching the product.</div>
+      <div class="work-link">READ ARTICLE →</div>
+    </a>
+
+    <div class="work-card" style="cursor:default;">
+      <div class="work-tags">
+        <span class="tag">On Request</span>
+      </div>
+      <div class="work-company">FULL PORTFOLIO</div>
+      <div class="work-title">Email Sequences, Ad Copy & Sales Collateral</div>
+      <div class="work-desc">Nurture flows, VSL scripts, social ad copy for AutoSavvy, longevity health brands, and B2B SaaS clients. Available on request across SaaS, B2B, and podcasting verticals.</div>
+      <div class="work-link" style="cursor:pointer;" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">CONTACT FOR SAMPLES →</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <div class="section-label">
+    <span class="section-num">02 / IMPACT</span>
+    <h2 class="section-title">Results That Matter</h2>
+  </div>
+  <div class="impact-grid">
+    <div class="impact-card">
+      <div class="impact-number">60</div>
+      <div class="impact-label">Niches Covered</div>
+      <div class="impact-desc">Developed and scaled funnel copy across 30 PodAllies niches and 30 PodUp niches each with tailored messaging, hooks, and CTAs for a distinct audience.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-number">7+</div>
+      <div class="impact-label">Years of Copy</div>
+      <div class="impact-desc">Across cybersecurity, SaaS, B2B services, e-learning, and podcasting with consistent output across blogs, funnels, email, and web.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-number">4×</div>
+      <div class="impact-label">Channel Formats</div>
+      <div class="impact-desc">Every asset repurposed across email, social, landing pages, and video scripts maximising reach without multiplying production cost.</div>
+    </div>
+  </div>
+
+  <div style="height:2px;"></div>
+
+  <div class="impact-cases">
+    <div class="case-card">
+      <span class="case-tag">Pipeline · PodUp</span>
+      <div class="case-title">Funnels Built for Scale</div>
+      <div class="case-desc">Led copy for PodAllies' full sales funnel system from cold traffic ads to strategy call bookings written for executives who don't have time to be sold to slowly.</div>
+      <div class="case-pills">
+        <span class="pill">VSL Scripts</span>
+        <span class="pill">Email Sequences</span>
+        <span class="pill">Landing Pages</span>
+      </div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Demand Generation · SecureW2</span>
+      <div class="case-title">Technical Content That Generates Leads</div>
+      <div class="case-desc">Wrote cybersecurity content targeting IT buyers optimised for organic search and designed to warm up the sales pipeline with pre-educated prospects.</div>
+      <div class="case-pills">
+        <span class="pill">SEO Blogs</span>
+        <span class="pill">White Papers</span>
+        <span class="pill">Case Studies</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="section-label">
+    <span class="section-num">03 / EXPERTISE</span>
+    <h2 class="section-title">What I Do Best</h2>
+  </div>
+  <div class="expertise-grid">
+    <div class="expertise-card">
+      <span class="expertise-icon">⚡</span>
+      <div class="expertise-name">Funnel Copywriting</div>
+      <div class="expertise-desc">Full-funnel copy from cold traffic to closed deal. VSL scripts, landing pages, email sequences, and sales pages all mapped to buyer intent.</div>
+    </div>
+    <div class="expertise-card">
+      <span class="expertise-icon">📡</span>
+      <div class="expertise-name">SaaS & B2B Content</div>
+      <div class="expertise-desc">Feature pages, onboarding flows, demand gen blogs, and product launches for technical products and non-technical buyers.</div>
+    </div>
+    <div class="expertise-card">
+      <span class="expertise-icon">🔐</span>
+      <div class="expertise-name">Technical Writing</div>
+      <div class="expertise-desc">Cybersecurity, IT infrastructure, and SaaS product copy that keeps accuracy intact while making complex ideas accessible to decision-makers.</div>
+    </div>
+    <div class="expertise-card">
+      <span class="expertise-icon">🎙️</span>
+      <div class="expertise-name">Podcast & Creator Copy</div>
+      <div class="expertise-desc">Marketing copy for podcast platforms, creator tools, and production services with direct experience running copy for one of the leading AI podcasting platforms.</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">
+    <span class="section-num">04 / EXPERIENCE</span>
+    <h2 class="section-title">Career History</h2>
+  </div>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="tl-dates">OCT 2024 to Present</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-role">Director of Copywriting</div>
+        <div class="tl-company">PodUp Inc. · Jaipur</div>
+        <ul class="tl-bullets">
+          <li>Led all copy across blogs, newsletters, websites, social, lead magnets, funnels, and creator content for both PodUp and PodAllies.</li>
+          <li>Built and managed the 37-niche funnel copy system for PodAllies' done-for-you podcast production service.</li>
+          <li>Managed cross-functional teams of writers, designers, video editors, and marketers to deliver cohesive campaigns.</li>
+          <li>Coordinated directly with U.S. clients to align messaging with brand and revenue goals.</li>
+          <li>Led SEO strategy including meta titles, descriptions, and geo-targeted optimisation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dates">JAN 2023 to AUG 2023</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-role">Senior Content Marketing Strategist</div>
+        <div class="tl-company">SecureW2 · Delhi (Remote)</div>
+        <ul class="tl-bullets">
+          <li>Developed blog posts, white papers, and case studies on cybersecurity for IT and enterprise audiences.</li>
+          <li>Optimised content for SEO and aligned all output with sales and GTM objectives.</li>
+          <li>Managed and updated the company's WordPress site across product and tech releases.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dates">SEP 2020 to SEP 2021</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-role">Senior Content Writer</div>
+        <div class="tl-company">Genpact · Delhi (Remote)</div>
+        <ul class="tl-bullets">
+          <li>Reviewed and summarised knowledge papers and presentations for BCG's eLearning platform.</li>
+          <li>Produced knowledge products vignettes, case summaries, and practice area documents for consultant-facing content.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-dates">MAY 2017 to MAY 2020</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-role">Supervisor, Business Operations</div>
+        <div class="tl-company">Interlynx Digital Solutions · Delhi</div>
+        <ul class="tl-bullets">
+          <li>Trained and mentored a 25-person team through regular reviews, coaching, and performance management.</li>
+          <li>Implemented client-specific sales funnels and lead capture systems increasing engagement and pipeline quality.</li>
+          <li>Managed high-profile accounts including Ingersoll Rand, Continental, Siemens, and Mitsubishi.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label">
+    <span class="section-num">05 / SKILLS & TOOLS</span>
+    <h2 class="section-title">Capabilities</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skills-col">
+      <div class="skills-col-title">✍ <span>Content & Copy</span></div>
+      <div class="skills-group">
+        <div class="skills-group-label">Content Types</div>
+        <div class="chips">
+          <span class="chip">Sales Funnels</span>
+          <span class="chip">Email Sequences</span>
+          <span class="chip">Landing Pages</span>
+          <span class="chip">Technical Blogs</span>
+          <span class="chip">VSL Scripts</span>
+          <span class="chip">Social Copy</span>
+          <span class="chip">Lead Magnets</span>
+          <span class="chip">Case Studies</span>
+          <span class="chip">Press Releases</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-label">Domains</div>
+        <div class="chips">
+          <span class="chip">SaaS</span>
+          <span class="chip">Cybersecurity</span>
+          <span class="chip">B2B Services</span>
+          <span class="chip">Podcasting</span>
+          <span class="chip">EdTech</span>
+          <span class="chip">Demand Generation</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <div class="skills-group-label">Competencies</div>
+        <div class="chips">
+          <span class="chip">SEO Strategy</span>
+          <span class="chip">Brand Voice</span>
+          <span class="chip">Conversion Optimisation</span>
+          <span class="chip">GTM Messaging</span>
+          <span class="chip">Team Leadership</span>
+        </div>
+      </div>
+    </div>
+    <div class="skills-col">
+      <div class="skills-col-title">🔧 <span>Tools</span></div>
+      <div class="chips" style="gap:10px;">
+        <span class="chip">WordPress</span>
+        <span class="chip">SEMrush</span>
+        <span class="chip">Ahrefs</span>
+        <span class="chip">Google Suite</span>
+        <span class="chip">HubSpot</span>
+        <span class="chip">Notion</span>
+        <span class="chip">Grammarly</span>
+        <span class="chip">ChatGPT</span>
+        <span class="chip">Canva</span>
+        <span class="chip">HTML</span>
+        <span class="chip">Office 365</span>
+        <span class="chip">CRM Software</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-label">
+    <span class="section-num">06 / RECOMMENDATIONS</span>
+    <h2 class="section-title">What Colleagues Say</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="reviewer-info">
+        <div class="reviewer-avatar">AG</div>
+        <div>
+          <div class="reviewer-name">Amanda Goedde</div>
+          <div class="reviewer-title">Team Lead · Brand Storyteller · Content Marketer</div>
+        </div>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <div class="review-quote">[Add your strongest recommendation quote here]</div>
+      <div class="review-body">Add the full recommendation text. You can copy this directly from LinkedIn or ask a manager/colleague to write one for you.</div>
+    </div>
+    <div class="review-card">
+      <div class="reviewer-info">
+        <div class="reviewer-avatar">NS</div>
+        <div>
+          <div class="reviewer-name">Nathan Gwilliam</div>
+          <div class="reviewer-title">Founder · PodUp Inc.</div>
+        </div>
+      </div>
+      <div class="review-stars">★★★★★</div>
+      <div class="review-quote">[Add your strongest recommendation quote here]</div>
+      <div class="review-body">Add the full recommendation text. You can copy this directly from LinkedIn or ask Nathan / another colleague to write one.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-eyebrow">07 / GET IN TOUCH</div>
+  <h2 class="contact-heading">Let's Work<br />Together</h2>
+  <p class="contact-sub">Open to full-time roles, freelance projects, and consulting engagements in B2B copy, SaaS content, and funnel strategy.</p>
+  <div class="contact-links">
+    <a href="/cdn-cgi/l/email-protection#c4ada9a5afa5b7aceab1af84a3a9a5ada8eaa7aba9" class="contact-link">✉ <span class="__cf_email__" data-cfemail="d4bdb9b5bfb5a7bcfaa1bf94b3b9b5bdb8fab7bbb9">[email&#160;protected]</span></a>
+    <a href="tel:+919953768693" class="contact-link">✆ +91 9953 768 693</a>
+    <a href="https://linkedin.com/in/YOUR-HANDLE" target="_blank" class="contact-link">↗ LinkedIn</a>
+  
