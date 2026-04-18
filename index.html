@@ -614,82 +614,6 @@
     border-radius: 2px;
   }
 
-  /* ── REVIEWS ── */
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    background: var(--border-light);
-    border: 1px solid var(--border-light);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  .review-card {
-    background: var(--bg2);
-    padding: 36px 32px;
-  }
-
-  .reviewer-info {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 20px;
-  }
-
-  .reviewer-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--gold);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: #111010;
-    flex-shrink: 0;
-  }
-
-  .reviewer-name {
-    font-family: 'Syne', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--white);
-  }
-
-  .reviewer-title {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 2px;
-  }
-
-  .review-stars {
-    color: var(--gold);
-    font-size: 13px;
-    letter-spacing: 2px;
-    margin-bottom: 14px;
-  }
-
-  .review-quote {
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 300;
-    color: rgba(242,237,230,0.75);
-    line-height: 1.75;
-    border-left: 2px solid var(--gold);
-    padding-left: 18px;
-    margin-bottom: 16px;
-  }
-
-  .review-body {
-    font-size: 13px;
-    font-weight: 300;
-    color: rgba(242,237,230,0.72);
-    line-height: 1.7;
-  }
-
   /* ── CONTACT ── */
   .contact-section {
     background: var(--bg2);
@@ -790,7 +714,6 @@
     .impact-grid { grid-template-columns: 1fr; }
     .expertise-grid { grid-template-columns: 1fr 1fr; }
     .skills-grid { grid-template-columns: 1fr; }
-    .reviews-grid { grid-template-columns: 1fr; }
     .impact-cases { grid-template-columns: 1fr; }
     .timeline-item { grid-template-columns: 100px 16px 1fr; }
     .contact-section { padding: 80px 24px; }
@@ -807,7 +730,7 @@
     <li><a href="#impact">Impact</a></li>
     <li><a href="#expertise">Expertise</a></li>
     <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -817,7 +740,7 @@
     <span class="hero-tag">Director of Copywriting</span>
     <h1>Akash<br /><span>Sharma</span></h1>
     <p class="hero-bio">
-      7+ years building copy that moves people through funnels across SaaS, B2B, podcasting, and cybersecurity. I lead teams, write the hard stuff, and make sure nothing ships unless it's built to convert.
+      7+ years building copy that moves people through funnels across SaaS, B2B, podcasting, and cybersecurity. I also write on AI infrastructure and data center markets for Compute Forecast, a global publication covering enterprise tech. I lead teams, write the hard stuff, and make sure nothing ships unless it's built to convert.
     </p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary">→ Work With Me</a>
@@ -911,6 +834,50 @@
       <div class="work-link">READ ARTICLE →</div>
     </a>
 
+    <a href="https://www.computeforecast.com/Opinion/ai-infrastructure-supply-chain-tariffs-geopolitical/" class="work-card" target="_blank">
+      <div class="work-tags">
+        <span class="tag">Opinion</span>
+        <span class="tag">AI Infrastructure</span>
+      </div>
+      <div class="work-company">COMPUTE FORECAST</div>
+      <div class="work-title">Tariffs Are Forcing the AI Industry to Confront a Supply Chain It Spent Years Ignoring</div>
+      <div class="work-desc">Opinion piece on how geopolitical trade pressure is exposing the fragility of AI infrastructure supply chains. Written for a senior technical and investor audience.</div>
+      <div class="work-link">READ ARTICLE →</div>
+    </a>
+
+    <a href="https://www.computeforecast.com/long-reads/ai-infrastructure-spending-roi-700-billion/" class="work-card" target="_blank">
+      <div class="work-tags">
+        <span class="tag">Long Read</span>
+        <span class="tag">Research</span>
+      </div>
+      <div class="work-company">COMPUTE FORECAST</div>
+      <div class="work-title">The $700 Billion Question: Can AI Infrastructure Spending Actually Justify Itself?</div>
+      <div class="work-desc">Research-led long read examining whether the scale of AI infrastructure investment can translate into real economic returns. Data-driven and argument-led.</div>
+      <div class="work-link">READ ARTICLE →</div>
+    </a>
+
+    <a href="https://www.computeforecast.com/Opinion/data-center-grid-cost-ratepayer-legislation-states/" class="work-card" target="_blank">
+      <div class="work-tags">
+        <span class="tag">Opinion</span>
+        <span class="tag">Policy</span>
+      </div>
+      <div class="work-company">COMPUTE FORECAST</div>
+      <div class="work-title">The States Are Right to Make Data Centers Pay for Their Own Grid</div>
+      <div class="work-desc">Policy opinion on data center energy cost legislation across 27 U.S. states. Takes a clear editorial position and defends it with economic and infrastructure arguments.</div>
+      <div class="work-link">READ ARTICLE →</div>
+    </a>
+
+    <a href="https://www.computeforecast.com/blogs/cuda-software-moat-nvidia-ai-dominance/" class="work-card" target="_blank">
+      <div class="work-tags">
+        <span class="tag">Technical Blog</span>
+        <span class="tag">AI</span>
+      </div>
+      <div class="work-company">COMPUTE FORECAST</div>
+      <div class="work-title">Why CUDA's Software Moat Matters More Than Any GPU Spec</div>
+      <div class="work-desc">Technical explainer on Nvidia's competitive advantage through software ecosystem lock-in. Written for technical and business audiences covering AI infrastructure.</div>
+      <div class="work-link">READ ARTICLE →</div>
+    </a>
+
     <div class="work-card" style="cursor:default;">
       <div class="work-tags">
         <span class="tag">On Request</span>
@@ -942,7 +909,7 @@
       <div class="impact-desc">Across cybersecurity, SaaS, B2B services, e-learning, and podcasting with consistent output across blogs, funnels, email, and web.</div>
     </div>
     <div class="impact-card">
-      <div class="impact-number">4×</div>
+      <div class="impact-number">4x</div>
       <div class="impact-label">Channel Formats</div>
       <div class="impact-desc">Every asset repurposed across email, social, landing pages, and video scripts maximising reach without multiplying production cost.</div>
     </div>
@@ -1104,6 +1071,8 @@
           <span class="chip">Podcasting</span>
           <span class="chip">EdTech</span>
           <span class="chip">Demand Generation</span>
+          <span class="chip">AI Infrastructure</span>
+          <span class="chip">Data Centers</span>
         </div>
       </div>
       <div class="skills-group">
@@ -1137,16 +1106,18 @@
   </div>
 </section>
 
-
-
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="contact-eyebrow">06 / GET IN TOUCH</div>
   <h2 class="contact-heading">Let's Work<br />Together</h2>
   <p class="contact-sub">Open to full-time roles, freelance projects, and consulting engagements in B2B copy, SaaS content, and funnel strategy.</p>
-    <div class="contact-links">
+  <div class="contact-links">
     <a href="mailto:imakash.uk@gmail.com" class="contact-link">✉ imakash.uk@gmail.com</a>
     <a href="tel:+918708364215" class="contact-link">📞 +91 8708364215</a>
     <a href="https://www.linkedin.com/in/akashdeep-sharma93" class="contact-link" target="_blank">in LinkedIn</a>
     <a href="https://akash-sharma-copywriter.github.io/portfolio" class="contact-link" target="_blank">⬡ Portfolio</a>
   </div>
+</section>
+
+</body>
+</html>
