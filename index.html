@@ -11,11 +11,11 @@
 </script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Akash Sharma | Senior Copywriter &amp; Content Lead</title>
-<meta name="description" content="Akash Sharma, senior copywriter and content lead. 7+ years of funnel copy, B2B and SaaS content, and AI infrastructure writing for U.S. and global brands." />
+<title>Akash Sharma | Copy &amp; Content Lead</title>
+<meta name="description" content="Akash Sharma, copy and content lead. 7+ years of conversion copy, thought leadership and technical B2B content, and leading content teams for U.S. and global brands." />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Akash Sharma | Senior Copywriter &amp; Content Lead" />
-<meta property="og:description" content="7+ years of funnel copy, B2B and SaaS content, and AI infrastructure writing. See selected work, results and career history." />
+<meta property="og:title" content="Akash Sharma | Copy &amp; Content Lead" />
+<meta property="og:description" content="7+ years of conversion copy, thought leadership and technical B2B content. See selected work, results and career history." />
 <meta property="og:url" content="https://akash-sharma-copywriter.github.io/portfolio/" />
 <meta name="twitter:card" content="summary" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23111010'/%3E%3Ctext x='50' y='66' font-size='52' text-anchor='middle' fill='%23C8A96E' font-family='Arial,sans-serif' font-weight='700'%3EAS%3C/text%3E%3C/svg%3E" />
@@ -719,6 +719,20 @@
     animation: fadeUp 0.7s 0.2s ease both;
   }
 
+  /* ── LANES ── */
+  .lane-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: -24px 0 28px; }
+  .lane-tab {
+    font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted); background: transparent; border: 1px solid var(--border-light); border-radius: var(--radius);
+    padding: 9px 14px; cursor: pointer; transition: color .2s, border-color .2s, background .2s;
+  }
+  .lane-tab:hover { color: var(--gold); border-color: var(--gold); }
+  .lane-tab.active { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+  .work-card.lane-hidden { display: none; }
+  .work-grid { background: transparent; gap: 0; border: none; }
+  .work-card { box-shadow: 0 0 0 1px var(--border-light); }
+  .lead-grid { grid-template-columns: 1fr 1fr; }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
@@ -732,6 +746,14 @@
     .impact-cases { grid-template-columns: 1fr; }
     .timeline-item { grid-template-columns: 100px 16px 1fr; }
     .contact-section { padding: 80px 24px; }
+    .lead-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .nav-sm-hide { display: none; }
+    .nav-logo { white-space: nowrap; }
+    .nav-links { gap: 18px; }
+    .expertise-grid { grid-template-columns: 1fr; }
+    .lane-tab { flex: 1 1 auto; }
   }
 </style>
 </head>
@@ -742,9 +764,10 @@
   <a class="nav-logo" href="#">AKASH SHARMA</a>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
-    <li><a href="#impact">Impact</a></li>
-    <li><a href="#expertise">Expertise</a></li>
-    <li><a href="#experience">Experience</a></li>
+    <li class="nav-sm-hide"><a href="#impact">Impact</a></li>
+    <li class="nav-sm-hide"><a href="#leadership">Leadership</a></li>
+    <li class="nav-sm-hide"><a href="#expertise">Expertise</a></li>
+    <li class="nav-sm-hide"><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -752,10 +775,10 @@
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <span class="hero-tag">Senior Copywriter &amp; Content Lead · Remote-First</span>
+    <span class="hero-tag" id="heroTag">Copy &amp; Content Lead · Delhi NCR · Remote or Hybrid</span>
     <h1>Akash<br /><span>Sharma</span></h1>
-    <p class="hero-bio">
-      7+ years building copy that moves people through funnels across SaaS, B2B, podcasting, and cybersecurity. I also write on AI infrastructure and data center markets for Compute Forecast, a global publication covering enterprise tech. I lead teams, write the hard stuff, and make sure nothing ships unless it's built to convert. MSc in Business and Management, University of Stirling, UK.
+    <p class="hero-bio" id="heroBio">
+      I write the words that sell and run the teams that ship them. 7+ years across SaaS, B2B, fintech, cybersecurity and podcasting: conversion copy that moves people through funnels, bylined thought leadership on AI infrastructure, and technical content for IT buyers. I led a 15-person content team as Director of Copywriting at PodUp, then wrote acquisition copy at Payoneer. MSc in Business and Management, University of Stirling, UK.
     </p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary">→ Work With Me</a>
@@ -765,23 +788,23 @@
   </div>
   <div class="hero-right">
     <div class="stat-box">
+      <div class="stat-number">435</div>
+      <div class="stat-label">Subscriptions From One Launch</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">200+</div>
+      <div class="stat-label">Bylined Pieces Published</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number">15</div>
+      <div class="stat-label">Person Content Team Led</div>
+    </div>
+    <div class="stat-box">
       <div class="stat-number">7+</div>
-      <div class="stat-label">Years Experience</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-number">60</div>
-      <div class="stat-label">Niches Built (PodAllies + PodUp)</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-number">~300</div>
-      <div class="stat-label">Pieces a Month (PodUp Team)</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-number">US</div>
-      <div class="stat-label">U.S. Clients Served</div>
+      <div class="stat-label">Years in Copy &amp; Content</div>
     </div>
     <div class="hero-quote">
-      "Copy that earns attention and closes the gap between interest and action."
+      "Copy that earns attention, content that earns trust, and a team that ships both."
     </div>
   </div>
 </div>
@@ -790,11 +813,17 @@
 <section id="work">
   <div class="section-label">
     <span class="section-num">01 / WORK SAMPLES</span>
-    <h2 class="section-title">Selected Writing</h2>
+    <h2 class="section-title">Selected Work</h2>
+  </div>
+  <div class="lane-tabs" role="tablist">
+    <button class="lane-tab active" data-lane="all">All work</button>
+    <button class="lane-tab" data-lane="conversion">Conversion copy</button>
+    <button class="lane-tab" data-lane="editorial">Editorial &amp; thought leadership</button>
+    <button class="lane-tab" data-lane="technical">Technical &amp; B2B</button>
   </div>
   <div class="work-grid">
 
-    <a href="https://podallies.com" class="work-card" target="_blank">
+    <a href="https://podallies.com" class="work-card" data-lane="conversion" target="_blank">
       <div class="work-tags">
         <span class="tag">Sales Funnel</span>
         <span class="tag">Long-Form</span>
@@ -805,7 +834,7 @@
       <div class="work-link">VIEW LIVE SITE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20251204022327/https://podup.com/copy-of-blackfriday" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20251204022327/https://podup.com/copy-of-blackfriday" class="work-card" data-lane="conversion" target="_blank">
       <div class="work-tags">
         <span class="tag">VSL Script</span>
         <span class="tag">Landing Page</span>
@@ -816,7 +845,7 @@
       <div class="work-link">VIEW ARCHIVED PAGE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20231201070124/https://www.cloudradius.com/wireless-enterprise-authentication-802-1x/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20231201070124/https://www.cloudradius.com/wireless-enterprise-authentication-802-1x/" class="work-card" data-lane="technical" target="_blank">
       <div class="work-tags">
         <span class="tag">Technical Blog</span>
         <span class="tag">SEO</span>
@@ -827,7 +856,7 @@
       <div class="work-link">READ ORIGINAL ARTICLE →</div>
     </a>
 
-    <a href="https://podup.com" class="work-card" target="_blank">
+    <a href="https://podup.com" class="work-card" data-lane="conversion technical" target="_blank">
       <div class="work-tags">
         <span class="tag">Website Copy</span>
         <span class="tag">SaaS</span>
@@ -838,7 +867,7 @@
       <div class="work-link">VIEW LIVE SITE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20230927025550/https://www.cloudradius.com/5-cyberattacks-mitigated-by-802-1x-wi-fi/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20230927025550/https://www.cloudradius.com/5-cyberattacks-mitigated-by-802-1x-wi-fi/" class="work-card" data-lane="technical" target="_blank">
       <div class="work-tags">
         <span class="tag">Technical Blog</span>
         <span class="tag">Demand Gen</span>
@@ -849,7 +878,7 @@
       <div class="work-link">READ ORIGINAL ARTICLE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20260613220050/https://computeforecast.com/long-reads/ai-infrastructure-spending-roi-700-billion/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20260613220050/https://computeforecast.com/long-reads/ai-infrastructure-spending-roi-700-billion/" class="work-card" data-lane="editorial" target="_blank">
       <div class="work-tags">
         <span class="tag">Long Read</span>
         <span class="tag">Research</span>
@@ -860,7 +889,7 @@
       <div class="work-link">READ FULL ARTICLE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20260612014155/https://computeforecast.com/long-reads/ai-infrastructure-debt-financing-buildout/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20260612014155/https://computeforecast.com/long-reads/ai-infrastructure-debt-financing-buildout/" class="work-card" data-lane="editorial" target="_blank">
       <div class="work-tags">
         <span class="tag">Long Read</span>
         <span class="tag">Finance</span>
@@ -871,7 +900,7 @@
       <div class="work-link">READ FULL ARTICLE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20260618174031/https://computeforecast.com/long-reads/ai-data-center-equipment-market-65-billion/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20260618174031/https://computeforecast.com/long-reads/ai-data-center-equipment-market-65-billion/" class="work-card" data-lane="editorial technical" target="_blank">
       <div class="work-tags">
         <span class="tag">Long Read</span>
         <span class="tag">Supply Chain</span>
@@ -882,7 +911,7 @@
       <div class="work-link">READ FULL ARTICLE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20260618084147/https://computeforecast.com/long-reads/gigawatt-campus-problem-ai-infrastructure-projects-stalling/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20260618084147/https://computeforecast.com/long-reads/gigawatt-campus-problem-ai-infrastructure-projects-stalling/" class="work-card" data-lane="editorial" target="_blank">
       <div class="work-tags">
         <span class="tag">Long Read</span>
         <span class="tag">Analysis</span>
@@ -893,7 +922,7 @@
       <div class="work-link">READ FULL ARTICLE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20260618083029/https://computeforecast.com/long-reads/private-credit-gpu-infrastructure-risk-neocloud-debt-2026/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20260618083029/https://computeforecast.com/long-reads/private-credit-gpu-infrastructure-risk-neocloud-debt-2026/" class="work-card" data-lane="editorial" target="_blank">
       <div class="work-tags">
         <span class="tag">Long Read</span>
         <span class="tag">Credit Risk</span>
@@ -904,7 +933,7 @@
       <div class="work-link">READ FULL ARTICLE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20260613220537/https://computeforecast.com/Opinion/ai-infrastructure-supply-chain-tariffs-geopolitical/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20260613220537/https://computeforecast.com/Opinion/ai-infrastructure-supply-chain-tariffs-geopolitical/" class="work-card" data-lane="editorial" target="_blank">
       <div class="work-tags">
         <span class="tag">Opinion</span>
         <span class="tag">AI Infrastructure</span>
@@ -915,7 +944,7 @@
       <div class="work-link">READ FULL ARTICLE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20260616215528/https://computeforecast.com/Opinion/data-center-grid-cost-ratepayer-legislation-states/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20260616215528/https://computeforecast.com/Opinion/data-center-grid-cost-ratepayer-legislation-states/" class="work-card" data-lane="editorial" target="_blank">
       <div class="work-tags">
         <span class="tag">Opinion</span>
         <span class="tag">Policy</span>
@@ -926,7 +955,7 @@
       <div class="work-link">READ FULL ARTICLE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20260712021901/https://www.computeforecast.com/Opinion/data-center-operators-new-utilities-regulation-gap/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20260712021901/https://www.computeforecast.com/Opinion/data-center-operators-new-utilities-regulation-gap/" class="work-card" data-lane="editorial" target="_blank">
       <div class="work-tags">
         <span class="tag">Opinion</span>
         <span class="tag">Regulation</span>
@@ -937,7 +966,7 @@
       <div class="work-link">READ FULL ARTICLE →</div>
     </a>
 
-    <a href="https://web.archive.org/web/20260618075555/https://computeforecast.com/Opinion/neocloud-gpu-commoditisation-infrastructure-stack/" class="work-card" target="_blank">
+    <a href="https://web.archive.org/web/20260618075555/https://computeforecast.com/Opinion/neocloud-gpu-commoditisation-infrastructure-stack/" class="work-card" data-lane="editorial" target="_blank">
       <div class="work-tags">
         <span class="tag">Opinion</span>
         <span class="tag">Industry Analysis</span>
@@ -948,7 +977,7 @@
       <div class="work-link">READ FULL ARTICLE →</div>
     </a>
 
-    <a href="https://www.computeforecast.com/long-reads/great-eviction-300kw-racks-hopper-gpu-toxic-assets/" class="work-card" target="_blank">
+    <a href="https://www.computeforecast.com/long-reads/great-eviction-300kw-racks-hopper-gpu-toxic-assets/" class="work-card" data-lane="editorial" target="_blank">
       <div class="work-tags">
         <span class="tag">Long Read</span>
         <span class="tag">Technical</span>
@@ -959,7 +988,18 @@
       <div class="work-link">READ ARTICLE (SUBSCRIBER) · FULL PDF ON REQUEST →</div>
     </a>
 
-    <div class="work-card" style="cursor:default;">
+    <div class="work-card" data-lane="editorial" style="cursor:default;">
+      <div class="work-tags">
+        <span class="tag">Knowledge Content</span>
+        <span class="tag">Consulting</span>
+      </div>
+      <div class="work-company">GENPACT · BOSTON CONSULTING GROUP</div>
+      <div class="work-title">Knowledge Products for BCG's eLearning Platform</div>
+      <div class="work-desc">Turned dense consulting research, knowledge papers and presentations into vignettes, case summaries, abstracts and practice-area documents for consultants, covering emerging markets and global advantage.<br /><span style="opacity:.7;font-size:.85em;">Internal client material, so samples aren't public.</span></div>
+      <div class="work-link">INTERNAL · NOT PUBLIC</div>
+    </div>
+
+    <div class="work-card" data-lane="conversion" style="cursor:default;">
       <div class="work-tags">
         <span class="tag">On Request</span>
       </div>
@@ -980,19 +1020,19 @@
   </div>
   <div class="impact-grid">
     <div class="impact-card">
+      <div class="impact-number">435</div>
+      <div class="impact-label">Subscriptions From One Launch</div>
+      <div class="impact-desc">PodUp's Black Friday Founding Creator launch (VSL, landing page and emails) drove 435 subscriptions with under 10% cancellation.</div>
+    </div>
+    <div class="impact-card">
+      <div class="impact-number">200+</div>
+      <div class="impact-label">Bylined Pieces</div>
+      <div class="impact-desc">Analysis, opinion and long reads on AI infrastructure, data centers, energy and policy for Compute Forecast, written for senior technical and investor readers.</div>
+    </div>
+    <div class="impact-card">
       <div class="impact-number">60</div>
-      <div class="impact-label">Niches Covered</div>
-      <div class="impact-desc">Developed and scaled funnel copy across 30 PodAllies niches and 30 PodUp niches each with tailored messaging, hooks, and CTAs for a distinct audience.</div>
-    </div>
-    <div class="impact-card">
-      <div class="impact-number">7+</div>
-      <div class="impact-label">Years of Copy</div>
-      <div class="impact-desc">Across cybersecurity, SaaS, B2B services, e-learning, and podcasting with consistent output across blogs, funnels, email, and web.</div>
-    </div>
-    <div class="impact-card">
-      <div class="impact-number">4x</div>
-      <div class="impact-label">Channel Formats</div>
-      <div class="impact-desc">Every asset repurposed across email, social, landing pages, and video scripts maximising reach without multiplying production cost.</div>
+      <div class="impact-label">Niches, Full Funnels</div>
+      <div class="impact-desc">A landing page, drip sequence and VSL for each of 60 niches across PodAllies and PodUp, every one with its own audience, hooks and CTAs.</div>
     </div>
   </div>
 
@@ -1023,26 +1063,55 @@
 </section>
 
 <!-- EXPERTISE -->
+<section id="leadership">
+  <div class="section-label">
+    <span class="section-num">03 / LEADERSHIP</span>
+    <h2 class="section-title">How I Lead</h2>
+  </div>
+  <div class="impact-cases lead-grid">
+    <div class="case-card">
+      <span class="case-tag">Direction</span>
+      <div class="case-title">Briefs before drafts</div>
+      <div class="case-desc">I write the brief, set the angle and hold the voice, so writers, designers and video editors all start from the same page instead of fixing it in review.</div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Quality</span>
+      <div class="case-title">Every piece reviewed</div>
+      <div class="case-desc">At PodUp my team shipped about 300 pieces a month across two brands, and I reviewed every one before it went out, from blogs and newsletters to social, scripts and landing pages.</div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">Scale</span>
+      <div class="case-title">Systems a team can run</div>
+      <div class="case-desc">The 60-niche funnel system let a small team ship a landing page, email sequence and VSL for every niche, and every strong asset got repurposed across email, social, landing pages and video.</div>
+    </div>
+    <div class="case-card">
+      <span class="case-tag">People</span>
+      <div class="case-title">Teams I've built and run</div>
+      <div class="case-desc">I've led a 15-person content team and trained and managed a 25-person operations team (named MVP in 2019), and I've worked directly with U.S. clients and senior stakeholders throughout.</div>
+    </div>
+  </div>
+</section>
+
 <section id="expertise">
   <div class="section-label">
-    <span class="section-num">03 / EXPERTISE</span>
+    <span class="section-num">04 / EXPERTISE</span>
     <h2 class="section-title">What I Do Best</h2>
   </div>
   <div class="expertise-grid">
     <div class="expertise-card">
       <span class="expertise-icon">⚡</span>
-      <div class="expertise-name">Funnel Copywriting</div>
+      <div class="expertise-name">Conversion Copy</div>
       <div class="expertise-desc">Full-funnel copy from cold traffic to closed deal. VSL scripts, landing pages, email sequences, and sales pages all mapped to buyer intent.</div>
     </div>
     <div class="expertise-card">
-      <span class="expertise-icon">📡</span>
-      <div class="expertise-name">SaaS & B2B Content</div>
-      <div class="expertise-desc">Feature pages, onboarding flows, demand gen blogs, and product launches for technical products and non-technical buyers.</div>
+      <span class="expertise-icon">📰</span>
+      <div class="expertise-name">Editorial &amp; Thought Leadership</div>
+      <div class="expertise-desc">Researched long reads and opinion pieces with a clear point of view, written for senior technical and investor readers, plus knowledge content built from consulting research.</div>
     </div>
     <div class="expertise-card">
       <span class="expertise-icon">🔐</span>
-      <div class="expertise-name">Technical Writing</div>
-      <div class="expertise-desc">Cybersecurity, IT infrastructure, and SaaS product copy that keeps accuracy intact while making complex ideas accessible to decision-makers.</div>
+      <div class="expertise-name">Technical &amp; B2B Content</div>
+      <div class="expertise-desc">Cybersecurity, IT and SaaS content, from white papers and demand gen blogs to onboarding flows and UX copy, that keeps the accuracy and makes it make sense to buyers.</div>
     </div>
     <div class="expertise-card">
       <span class="expertise-icon">👥</span>
@@ -1055,7 +1124,7 @@
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">
-    <span class="section-num">04 / EXPERIENCE</span>
+    <span class="section-num">05 / EXPERIENCE</span>
     <h2 class="section-title">Career History</h2>
   </div>
   <div class="timeline">
@@ -1163,7 +1232,7 @@
         <div class="tl-company">Interlynx Digital Solutions · Delhi</div>
         <ul class="tl-bullets">
           <li>Trained and mentored a 25-person team through regular reviews, coaching, and performance management.</li>
-          <li>Built sales funnels and lead capture for high-profile accounts including Ingersoll Rand, Continental, Siemens, and Mitsubishi, using HubSpot, Salesforce and Marketo. Named Most Valuable Player (2019).</li>
+          <li>Ran lead capture, email and campaign operations in HubSpot, Salesforce and Marketo for high-profile accounts including Ingersoll Rand, Continental, Siemens, and Mitsubishi. Named Most Valuable Player (2019).</li>
         </ul>
       </div>
     </div>
@@ -1174,7 +1243,7 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-label">
-    <span class="section-num">05 / SKILLS & TOOLS</span>
+    <span class="section-num">06 / SKILLS & TOOLS</span>
     <h2 class="section-title">Capabilities</h2>
   </div>
   <div class="skills-grid">
@@ -1246,16 +1315,46 @@
 
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
-  <div class="contact-eyebrow">06 / GET IN TOUCH</div>
+  <div class="contact-eyebrow">07 / GET IN TOUCH</div>
   <h2 class="contact-heading">Let's Work<br />Together</h2>
-  <p class="contact-sub">Open to full-time remote roles, freelance projects, and consulting engagements in B2B copy, SaaS content, and funnel strategy.</p>
+  <p class="contact-sub">Available to join immediately. Open to full-time roles, remote or hybrid in Delhi NCR, Bengaluru, Pune, Hyderabad or Chandigarh, plus freelance and consulting work in copy, content and editorial.</p>
   <div class="contact-links">
     <a href="mailto:imakash.uk@gmail.com" class="contact-link">✉ imakash.uk@gmail.com</a>
     <a href="tel:+918708265429" class="contact-link">📞 +91 8708265429</a>
     <a href="https://www.linkedin.com/in/akashdeep-sharma93" class="contact-link" target="_blank">in LinkedIn</a>
-    <a href="https://akash-sharma-copywriter.github.io/portfolio" class="contact-link" target="_blank">⬡ Portfolio</a>
+    <a href="Resume.pdf" download class="contact-link">↓ Resume</a>
   </div>
 </section>
 
+<script>
+(function(){
+  var LANES={
+    conversion:{tag:"Conversion Copywriter · Funnels, Landing Pages &amp; Email",
+      bio:"I write copy that moves people from curious to converted. At PodUp I built a 60-niche funnel system, with a landing page, email sequence and VSL for every niche, and wrote a Black Friday launch that drove 435 subscriptions with under 10% cancellation. At Payoneer I wrote acquisition landing pages for paid search. 7+ years across SaaS, B2B, fintech and podcasting.", filter:"conversion"},
+    editorial:{tag:"Editorial &amp; Thought Leadership Writer",
+      bio:"I turn complex subjects into clear, argued pieces that senior readers actually finish. I've published 200+ bylined analysis and opinion pieces on AI infrastructure, data centers, energy and policy for Compute Forecast, and built knowledge products from Boston Consulting Group research for its consultants. 7+ years writing for technical, business and investor audiences.", filter:"editorial"},
+    technical:{tag:"B2B &amp; Technical Content Writer",
+      bio:"I make technical products make sense to the people who buy them. At SecureW2 I wrote about 50 blogs, white papers and case studies on 802.1X, RADIUS and network security for IT buyers, built to rank and to bring in pre-educated leads. I've also written UX copy, onboarding flows and FAQ docs for an AI SaaS platform, and 200+ pieces on AI infrastructure.", filter:"technical"},
+    lead:{tag:"Content Lead · Team, Voice &amp; Editorial Strategy",
+      bio:"I set the voice, run the team and write the hard pieces myself. As Director of Copywriting at PodUp I owned content for two brands and led a 15-person team of writers, designers and video editors shipping about 300 pieces a month. Before that I trained and managed a 25-person operations team. My own writing spans conversion copy, thought leadership and technical B2B content.", filter:"all"}
+  };
+  var tag=document.getElementById('heroTag'), bio=document.getElementById('heroBio');
+  var defTag=tag.innerHTML, defBio=bio.innerHTML;
+  var tabs=[].slice.call(document.querySelectorAll('.lane-tab'));
+  var cards=[].slice.call(document.querySelectorAll('.work-card'));
+  function filter(l){
+    tabs.forEach(function(b){b.classList.toggle('active', b.getAttribute('data-lane')===l);});
+    cards.forEach(function(c){c.classList.toggle('lane-hidden', l!=='all' && (c.getAttribute('data-lane')||'').split(' ').indexOf(l)===-1);});
+  }
+  function apply(){
+    var h=(location.hash||'').replace('#',''), L=LANES[h];
+    if(L){ tag.innerHTML=L.tag; bio.innerHTML=L.bio; filter(L.filter); }
+    else if(!h || ['work','impact','leadership','expertise','experience','skills','contact'].indexOf(h)===-1){ tag.innerHTML=defTag; bio.innerHTML=defBio; filter('all'); }
+  }
+  tabs.forEach(function(b){ b.addEventListener('click', function(){ filter(b.getAttribute('data-lane')); }); });
+  window.addEventListener('hashchange', apply);
+  apply();
+})();
+</script>
 </body>
 </html>
